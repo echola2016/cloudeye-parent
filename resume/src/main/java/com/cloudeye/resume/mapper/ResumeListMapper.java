@@ -1,8 +1,9 @@
-package com.cloudeye.resume.basic.mapper;
+package com.cloudeye.resume.mapper;
+
 import com.cloudeye.base.mapper.CloudEyeBaseMapper;
+import com.cloudeye.resume.model.ResumeList;
 import org.apache.ibatis.annotations.Mapper;
-import com.cloudeye.resume.basic.model.ResumeList;
-import java.util.List;
+
 @Mapper
 public interface ResumeListMapper extends CloudEyeBaseMapper<ResumeList> {
 

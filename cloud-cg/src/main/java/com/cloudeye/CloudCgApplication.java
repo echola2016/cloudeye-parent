@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CloudaCgApplication {
+public class CloudCgApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CloudaCgApplication.class, args);
+		SpringApplication.run(CloudCgApplication.class, args);
 	}
 }

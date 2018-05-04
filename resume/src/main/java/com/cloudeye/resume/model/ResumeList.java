@@ -1,6 +1,5 @@
-package com.cloudeye.resume.basic.model;
+package com.cloudeye.resume.model;
 import javax.persistence.Id;
-import java.util.Date;
 import java.io.Serializable;
 
 public class ResumeList implements Serializable {

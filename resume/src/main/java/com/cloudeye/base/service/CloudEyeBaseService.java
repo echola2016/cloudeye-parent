@@ -95,7 +95,6 @@ public class CloudEyeBaseService<M extends CloudEyeBaseMapper,T extends Serializ
             page = PageHelper.startPage(pageNum,pageSize);
         }
         Example example = new Example(t.getClass(),false);
-        example.setOrderByClause(orderBy);
         Example.Criteria criteria = example.createCriteria();
         Field[] fields = t.getClass().getDeclaredFields();
         for(Field f:fields){

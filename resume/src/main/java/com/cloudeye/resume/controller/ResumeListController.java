@@ -1,19 +1,16 @@
-package com.cloudeye.resume.basic.controller;
+package com.cloudeye.resume.controller;
 
 
 import com.cloudeye.base.http.ReqParams;
 import com.cloudeye.base.http.Result;
+import com.cloudeye.resume.model.ResumeList;
+import com.cloudeye.resume.service.ResumeListService;
 import com.github.pagehelper.Page;
-import com.cloudeye.resume.basic.service.ResumeListService;
-import com.cloudeye.resume.basic.model.ResumeList;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.servlet.http.HttpServletResponse;
-import java.io.OutputStream;
 import java.util.List;
 
 
