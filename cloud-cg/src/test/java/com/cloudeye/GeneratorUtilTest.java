@@ -1,8 +1,9 @@
 package com.cloudeye;
 
 
-import com.ytkj.cg.generator.prop.GeneratorProperties;
-import com.ytkj.cg.generator.util.GeneratorFactory;
+
+import com.cloudeye.generator.prop.GeneratorProperties;
+import com.cloudeye.generator.util.GeneratorFactory;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -36,7 +37,7 @@ public class GeneratorUtilTest {
 	@Test
 	public void createDomain(){
 		try {
-			GeneratorFactory.getInstance().gen("com.cloudeye.resume.basic", "resume_list");
+			GeneratorFactory.getInstance().gen("com.cloudeye.sys.basic", "role");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -44,7 +45,7 @@ public class GeneratorUtilTest {
 	@Test
 	public void createMapperAndServiceCode(){
 		try {
-			GeneratorFactory.getInstance().gen("com.cloudeye.resume.basic.model.ResumeList");
+			GeneratorFactory.getInstance().gen("com.cloudeye.sys.basic.model.User");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

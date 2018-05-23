@@ -1,0 +1,15 @@
+package ${packageName};
+
+import java.util.List;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import ${modelClass};
+import ${basePackage}.${genProp.daoPackageName}.${className}Mapper;
+import com.cloudeye.base.service.CloudEyeBaseService;
+@Service
+@Transactional
+public class ${className}Service extends CloudEyeBaseService<${className}Mapper,${className}> {
+
+
+
+ }

@@ -1,0 +1,12 @@
+package ${packageName};
+import org.apache.ibatis.annotations.Mapper;
+import ${genProp.baseMapper};
+import ${modelClass};
+import java.util.List;
+import com.cloudeye.base.mapper.CloudEyeBaseMapper;
+@Mapper
+public interface ${className}Mapper extends CloudEyeBaseMapper<${className}> {
+
+
+
+ }

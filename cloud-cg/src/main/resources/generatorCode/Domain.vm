@@ -1,0 +1,22 @@
+package ${packageName};
+import java.util.Date;
+import java.io.Serializable;
+
+public class ${className?cap_first} implements Serializable {
+
+ <#list propertiesMap?keys as key>
+ 	private ${propertiesMap[key]} ${key};
+ 	
+   </#list>
+    
+	<#list propertiesMap?keys as key>
+ 	public void  set${key?cap_first}(${propertiesMap[key]} ${key}){
+ 		this.${key} = ${key};	
+ 	};
+ 	public ${propertiesMap[key]} get${key?cap_first}(){
+ 		return this.${key};
+ 	}
+    </#list>
+    
+ 
+ }
