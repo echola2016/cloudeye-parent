@@ -2,13 +2,10 @@ package ${packageName};
 
 
 import com.github.pagehelper.Page;
-import com.cloud2eye.base.http.Result;
-import com.cloud2eye.base.http.ReqParams;
-import com.github.crab2died.ExcelUtils;
+import com.cloudeye.base.http.ReqParams;
+import com.cloudeye.base.http.Result;
 import ${basePackage}.${genProp.servicePackageName}.${className}Service;
 import ${basePackage}.${genProp.modelPackageName}.${className};
-import com.ytkj.aoms.http.ReqParams;
-import com.ytkj.aoms.http.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -34,14 +31,14 @@ public class ${className}Controller {
        return new Result().success(${classNickName});
      }
      @RequestMapping("/delete")
-     public Result delete${classNickName}(@RequestBody String id){
+     public Result delete${className}(@RequestBody String id){
        ${classNickName}Service.deleteById(id);
        return new Result().success();
      }
     @RequestMapping("/update")
-    public Result update${className}(@RequestBody ${className} ${className}) {
+    public Result update${className}(@RequestBody ${className} ${classNickName}) {
 
-       ${classNickName}Service.update(${className});
+       ${classNickName}Service.update(${classNickName});
        return new Result().success();
     }
     @RequestMapping("/pageQuery")
@@ -50,33 +47,15 @@ public class ${className}Controller {
         return new Result().success(page);
     }
     @RequestMapping("/queryAll")
-    public Result queryList(@RequestBody ${className} ${className}){
-    List<${className}> list = ${classNickName}Service.queryAll(${className});
+    public Result queryList(@RequestBody ${className} ${classNickName}){
+    List<${className}> list = ${classNickName}Service.queryAll(${classNickName});
         return new Result().success(list);
     }
 
     @RequestMapping("/detail")
     public Result queryDetail(@RequestBody String id){
-        ${className} ${className} = ${classNickName}Service.queryById(id);
-        return new Result().success(${className});
+        ${className} ${classNickName} = ${classNickName}Service.queryById(id);
+        return new Result().success(${classNickName});
     }
-    @RequestMapping("/exportExcel")
-    public void exportExcel(HttpServletResponse response, @RequestBody ReqParams<${className}> params){
-        List<${className}> list = null;
-            if(params.getPageNum()==0){
-                list = ${classNickName}Service.queryAll(new ${className}());
-            }else {
-                Page<${className}> page = ${classNickName}Service.pageQuery(params.getData(),params.getPageNum(),params.getPageSize(),"${className}_no");
-                    list = page.getResult();
-                }
-                try {
-                    long fileName = System.currentTimeMillis();
-                    response.setHeader("Content-disposition", "attachment; filename=" + fileName+ ".xlsx");
-                    OutputStream outputStream = response.getOutputStream();
-                    ExcelUtils.getInstance().exportObjects2Excel(list,${className}.class,true,"sheet1",true,outputStream);
-                    outputStream.close();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-    }
+
+}
