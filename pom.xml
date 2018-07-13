@@ -22,6 +22,7 @@
         <module>resume</module>
         <module>cloud-base</module>
         <module>cloud-sys</module>
+        <module>cloud-config</module>
     </modules>
 
     <dependencies>

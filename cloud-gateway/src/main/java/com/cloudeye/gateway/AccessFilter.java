@@ -35,11 +35,11 @@ public class AccessFilter extends ZuulFilter {
 
     @Override
     public Object run() {
-        RequestContext context = RequestContext.getCurrentContext();
-        HttpServletRequest request = context.getRequest();
-        String result = restTemplate.postForObject("http://cloud-sys/user/login",null,
+      RequestContext context = RequestContext.getCurrentContext();
+       /* HttpServletRequest request = context.getRequest();
+        String result = restTemplate.postForObject("http://cloud-sys/cloud-sys/user/login",null,
                 String.class);
-        log.info("send {} request to {}--data {}",request.getMethod(),request.getRequestURL().toString(),result);
+        log.info("send {} request to {}--data {}",request.getMethod(),request.getRequestURL().toString(),result);*/
         return null;
     }
 
